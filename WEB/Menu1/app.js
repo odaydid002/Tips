@@ -1,4 +1,4 @@
-// Designed by:  Mauricio Bucardo
+// Designed by:  Oudai oulhadj
 // Original image:
 // https://dribbble.com/shots/5619509-Animated-Tab-Bar
 
