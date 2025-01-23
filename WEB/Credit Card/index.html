@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dahabia</title>
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <div class="flip-card">
+            <div id="card" class="flip-card-inner">
+                <div class="current-input" id="currentInp"></div>
+              <div class="flip-card-front">
+                <div class="backColor"></div>
+                <h1 class="title golden">الذهبية</h1>
+                <img class="grandpost" src="assets/grandpost.png" alt="logo">
+                <img class="logo" src="assets/logo.png" alt="logo">
+                <img class="palm" src="assets/palmier.png" alt="logo">
+                <img class="build" src="assets/wizara.png" alt="logo">
+                <img src="assets/title.png" alt="logo" class="tit">
+                <img class="chip" src="assets/chip.png" alt="logo">
+                <img class="triangle" src="assets/triangle.png" alt="logo">
+                <div class="selver"></div>
+                <div class="card-number golden">
+                        <script type="text/javascript">
+                            for(let i=1; i<= 16; i++)
+                                document.write(`<span class="cnh" id="cn${i}">-</span>`);
+                        </script>
+                </div>
+                <div class="card-date"><span class="cd golden" id="cd"><span id="cdm">mm</span>/<span id="cdy">yy</span> </span> <span class="cdd golden">تنتهي بتاريخ</span></div>
+                <div class="card-name golden"><span id="cholder">Holder Name<span></div>
+            </div>
+            <div class="flip-card-back">
+                <div class="warn">
+                    <span style="padding-right: 20px;">VALABLE UNIQUEMENT EN ALGERIE</span>
+                    <span>صالحة في الجزائر فقط</span>
+                </div>
+                <div class="black-tip"></div>
+                <div class="card-cvv">
+                    <div class="white-tip">
+                        <span id="cvv">
+                            <span id="cv1">-</span>
+                            <span id="cv2">-</span>
+                            <span id="cv3">-</span>
+                        </span>
+                    </div>
+                    <span class="cvv-info">إمضاء صاحب البطاقة</span>
+                </div>
+                <div class="warn ar">هام: هذه البطاقة شخصية ويجب استعمالها وفقا لشروط عقد الإنضمام. الرجاء من كل شخص يعثر على هذه البطاقة تسليمها لمكتب البريد الأقرب منكم.</div>
+                <div class="warn fr">IMPORTANT: Carte strictement personelle elle doit étre utilisée conformément aux conditions du contrat d'adhésion. Toute personne trouvant cette carte est priée de bien vouloir la déposer au bureau de poste le plus proche</div>
+                <div class="footer">
+                    <span>A000000723</span>
+                    <span>www.poste.dz / Centre d'appel: 1530</span>
+                </div>
+                </div>
+            </div>
+        </div>
+        <label for="cardNumber">Card Number</label>
+        <input type="text" name="cardNumber" id="cardNumber" class="inp" maxlength="16">
+        <label for="cardHolder">Card Holder</label>
+        <input type="text" name="cardHolder" id="cardHolder" class="inp" maxlength="20">
+        <div class="row">
+            <label for="expMonth">Expiration Date</label>
+            <label for="cardCvv" class="frt" style="margin-right: 65px;">CVV</label>
+        </div>
+        <div class="row">
+            <select class="inp mini" name="expMonth" id="expMonth">
+                <option>Month</option>
+                <script type="text/javascript">
+                    for(let i=1; i<= 12; i++)
+                        document.write(`<option value="0${i}" class="opt">${i>9?i:"0"+i}</option>`);
+                </script>
+            </select>
+            <select class="inp mini" name="expYear" id="expYear" >
+                <option>Year</option>
+                <script type="text/javascript">
+                    var year = new Date();
+                    for(let i=0; i<= 9; i++)
+                        document.write(`<option value="${(year.getFullYear()+i)}" class="opt">${year.getFullYear()+i}</option>`);
+                </script>
+            </select>
+            <input class="inp mini frt" type="text" name="cardCvv" id="cardCvv" maxlength="3">
+        </div>
+        <button class="subbut">Submit</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
